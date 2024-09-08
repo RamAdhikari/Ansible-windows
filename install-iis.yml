@@ -1,0 +1,17 @@
+---
+collection: redhat.windo
+tasks:
+  - name: Install IIS role
+    windows_package:
+      name: Web-Server (IIS)
+      state: prese
+  - name: Configure firewall rules for IIS
+    win_firewall:
+      name: Allow HTTP Traffic
+      port: 80
+      protocol: TCP
+      state: enabl
+  - name: Restart IIS service
+    windows_service:
+      name: w3svc
+      state: restarted
