@@ -1,5 +1,7 @@
 ---
 - hosts: windows
+  collections:
+    - community.windows
   vars:
     ansible_site_path: "c:\\inetpub\\wwwroot\\ansibletest"
     staging_path: "c:\\deploy"
