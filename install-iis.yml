@@ -1,5 +1,5 @@
 ---
-collection: redhat.windo
+collection: redhat.windows
 tasks:
   - name: Install IIS role
     windows_package:
